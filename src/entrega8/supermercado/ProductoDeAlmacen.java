@@ -37,7 +37,7 @@ public class ProductoDeAlmacen extends Product implements Iva {
 	//TOSTRING
 	@Override
 	public String toString() {
-		return "ProductoDeAlmacen [StockNum=" + stockNum + super.toString() + "]";
+		return "ProductoDeAlmacen [StockNum= " + stockNum + "\n" + super.toString() + "]";
 	}
 	
 	

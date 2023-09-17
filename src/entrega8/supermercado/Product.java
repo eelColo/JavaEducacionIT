@@ -46,7 +46,7 @@ public abstract class Product {
 	
 	@Override
 	public String toString() {
-		return "Product [price =" + price + ", name =" + name + "]";
+		return " Product [price= " + price + ", name= " + name + "]";
 	}
 	
 	
