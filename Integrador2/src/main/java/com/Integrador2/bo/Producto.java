@@ -3,29 +3,26 @@ package com.Integrador2.bo;
 //SUPERCLASE
 public class Producto {
 	//ATRIBUTOS
-	private int codigo;
+	
 	private String nombre;
 	private String descripcion;
-	private Double precio;
+	private int precio;
 	private int stock;
 	
 	//METODOS
 	//CONSTRUCTOR CON Y SIN SOBRECARGA
-	public Producto(){}
-	public Producto(int codigo, String nombre, String descripcion, Double precio, int stock) {
-		this.codigo = codigo;
+	public Producto(){
+		
+	}
+	public Producto(String nombre, String descripcion, int precio, int stock) {
+		
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.stock = stock;
 	}
 	//SETTERS Y GETTERS
-	public int getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
+	
 	
 	public String getNombre() {
 		return nombre;
@@ -41,10 +38,10 @@ public class Producto {
 		this.descripcion = descripcion;
 	}
 	
-	public Double getPrecio() {
+	public int getPrecio() {
 		return precio;
 	}
-	public void setPrecio(Double precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 	
@@ -59,7 +56,7 @@ public class Producto {
 	//ToString
 	@Override
 	public String toString() {
-		return "Producto [codigo=" + codigo + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio="
+		return "Producto [nombre=" + nombre + ", descripcion=" + descripcion + ", precio="
 				+ precio + ", stock=" + stock + "]";
 	}
 	
