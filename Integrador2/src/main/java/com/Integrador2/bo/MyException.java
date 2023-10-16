@@ -2,8 +2,8 @@ package com.Integrador2.bo;
 
 public class MyException extends Exception {
 	private String message;
-	
-	public MyException(String messaje){
+
+	public MyException(String messaje) {
 		setMessage(messaje);
 	}
 
@@ -14,5 +14,5 @@ public class MyException extends Exception {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
+
 }
