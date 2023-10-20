@@ -10,7 +10,7 @@ import com.Integrador2.bo.Producto;
 import com.Integrador2.dao.IOperacionesDB;
 
 public class OperacionesProducto implements IOperacionesDB {
-	// Mamita se viene el rompecabezas
+	// Operaciones con base de datos
 
 	// Variables que se van a usar en la implementacion
 	String sql;
@@ -202,9 +202,9 @@ public class OperacionesProducto implements IOperacionesDB {
 					System.out.println("Error cerrando base de datos. " + e.getMessage());
 				}
 				// excepcion por si se ingresa valor incorrecto
-			} else
+			} else {
 				throw new MyException("Porfavor ingrese un valor numerico acorde a las opciones. \n");
-
+			}
 		} catch (Exception e) {
 			System.out.println("Error en modify " + e.getMessage());
 		} finally {
@@ -234,11 +234,13 @@ public class OperacionesProducto implements IOperacionesDB {
 			ResultSet datos = stmt.executeQuery(sql);
 
 			while (datos.next()) {
+				System.out.println("");
+				System.out.println("Codigo: " + datos.getInt("codigo"));
 				System.out.println("Nombre: " + datos.getString("nombre"));
 				System.out.println("Descripcion: " + datos.getString("descripcion"));
 				System.out.println("Precio: " + datos.getInt("precio"));
 				System.out.println("Stock: " + datos.getInt("stock") + "\n");
-
+				
 			}
 
 		} catch (Exception e) {
